@@ -23,7 +23,9 @@ jobs:
       with:
         ref: results
         sparse-checkout: results
-        path: .
+        path: tmp
+    - name: Move results to root #https://github.com/actions/checkout/issues/1430
+      run: mv tmp/results results
     - name: Show folders
       run: |
         sudo apt-get install tree &&
