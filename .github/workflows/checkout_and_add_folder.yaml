@@ -22,7 +22,8 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: results
-        sparse-checkout: results
+        sparse-checkout: results/
+        path: results
     - name: Show folders
       run: |
         sudo apt-get install tree &&
