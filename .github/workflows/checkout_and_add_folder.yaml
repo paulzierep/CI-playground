@@ -16,10 +16,13 @@ jobs:
     environment: Test-01
     name: Fetch main
     steps:
-    - uses: actions/checkout@v4
-    - name: checkout results
-      run: |
-        git checkout results -- results
+    - name: Checkout main
+      uses: actions/checkout@v4
+    - name:
+      uses: actions/checkout@v4
+      with:
+        ref: results
+        path: results
     - name: Show folders
       run: |
         sudo apt-get install tree &&
