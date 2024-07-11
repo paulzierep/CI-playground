@@ -1,4 +1,4 @@
-name: Fetch all tutorials
+name: Checkout and add folder from other Branch
 
 on:
   workflow_dispatch:
