@@ -17,7 +17,7 @@ jobs:
     name: Fetch main
     steps:
     - uses: actions/checkout@v4
-      name: checkout results
+    - name: checkout results
       run: |
         git checkout results -- results
     - name: Show folders
