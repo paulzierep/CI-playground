@@ -18,11 +18,11 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v4
-    - name:
+    - name: Checkout results
       uses: actions/checkout@v4
       with:
         ref: results
-        path: results
+        sparse-checkout: results
     - name: Show folders
       run: |
         sudo apt-get install tree &&
